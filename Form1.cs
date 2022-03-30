@@ -62,7 +62,7 @@ namespace ETS2_DualSenseAT_Mod
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string filepath = Application.StartupPath + @"\dependencies";
+            string filepath = Application.StartupPath;
             DirectoryInfo d = new DirectoryInfo(filepath);
 
             var Settings = new IniFile("Settings.ini");
@@ -77,16 +77,16 @@ namespace ETS2_DualSenseAT_Mod
 
             try
             {
-                File.Copy(Application.StartupPath + @"\dependencies\dinput8.dll", game_path + @"\dinput8.dll");
-                File.Copy(Application.StartupPath + @"\dependencies\NativeTrainer.asi", game_path + @"\NativeTrainer.asi");
-                File.Copy(Application.StartupPath + @"\dependencies\ScriptHookV.dll", game_path + @"\ScriptHookV.dll");
-                File.Copy(Application.StartupPath + @"\dependencies\ScriptHookVDotNet.asi", game_path + @"\ScriptHookVDotNet.asi");
-                File.Copy(Application.StartupPath + @"\dependencies\ScriptHookVDotNet.ini", game_path + @"\ScriptHookVDotNet.ini");
-                File.Copy(Application.StartupPath + @"\dependencies\ScriptHookVDotNet2.dll", game_path + @"\ScriptHookVDotNet2.dll");
-                File.Copy(Application.StartupPath + @"\dependencies\ScriptHookVDotNet3.dll", game_path + @"\ScriptHookVDotNet3.dll");
+                File.Copy(Application.StartupPath + @"\dinput8.dll", game_path + @"\dinput8.dll", true);
+                File.Copy(Application.StartupPath + @"\NativeTrainer.asi", game_path + @"\NativeTrainer.asi", true);
+                File.Copy(Application.StartupPath + @"\ScriptHookV.dll", game_path + @"\ScriptHookV.dll", true);
+                File.Copy(Application.StartupPath + @"\ScriptHookVDotNet.asi", game_path + @"\ScriptHookVDotNet.asi", true);
+                File.Copy(Application.StartupPath + @"\ScriptHookVDotNet.ini", game_path + @"\ScriptHookVDotNet.ini", true);
+                File.Copy(Application.StartupPath + @"\ScriptHookVDotNet2.dll", game_path + @"\ScriptHookVDotNet2.dll", true);
+                File.Copy(Application.StartupPath + @"\ScriptHookVDotNet3.dll", game_path + @"\ScriptHookVDotNet3.dll", true);
 
-                File.Copy(Application.StartupPath + @"\dependencies\DusalSsanse4gtav.dll", game_path + @"\Scripts\DusalSsanse4gtav.dll");
-                File.Copy(Application.StartupPath + @"\dependencies\Newtonsoft.Json.dll", game_path + @"\Scripts\Newtonsoft.Json.dll");
+                File.Copy(Application.StartupPath + @"\DusalSsanse4gtav.dll", game_path + @"\Scripts\DusalSsanse4gtav.dll", true);
+                File.Copy(Application.StartupPath + @"\Newtonsoft.Json.dll", game_path + @"\Scripts\Newtonsoft.Json.dll", true);
 
                 Settings.Write("is_installed", "true");
 
@@ -109,7 +109,7 @@ namespace ETS2_DualSenseAT_Mod
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string filepath = Application.StartupPath + @"\dependencies";
+            string filepath = Application.StartupPath;
             DirectoryInfo d = new DirectoryInfo(filepath);
 
             var Settings = new IniFile("Settings.ini");
